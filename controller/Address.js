@@ -99,7 +99,7 @@ export async function newAddress() {
   };
 
   btnClose.onclick = async function () {
-    closeModalDetails();
+    window.location.reload();
   };
 
   modal.style.display = 'block';
