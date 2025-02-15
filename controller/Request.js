@@ -337,27 +337,7 @@ export async function openRequestDetails(request) {
       </tbody>
     </table>
   `;
-  /*
-    <div class="button-client-table">
-      <i class="request-address-btn
-        bi bi-geo-alt tabBtn"
-        data-address='${JSON.stringify(request)}'>
-      </i>
-      <i class="request-environment-btn
-        bi bi-thermometer-snow tabBtn"
-        data-environment='${JSON.stringify(request)}'>
-      </i>
-      <i class="request-service-btn
-        bi bi-tools tabBtn"
-        data-service='${JSON.stringify(request)}'>
-      </i>
-      <i class="request-type-btn
-        bi-filetype-pdf tabBtn"
-        data-type='${JSON.stringify(request)}'>
-      </i>
-    </div>
-  */
-
+  
   footer.innerHTML = `
     <div class="modal-user-footer">
       <button type="button" id="budgetBtn" class="hidden">Orçamento</button>
@@ -844,6 +824,9 @@ export async function modalNewRequest() {
     const address = selectedOption.value;
     const dataAddress = selectedOption.getAttribute('data-address');
     const environment = document.getElementById('envName');
+    const status = 'Pendente';
+    const data = {};
+
     if (address.value === '') {
       showModalAlert(
         'Alert',
@@ -870,9 +853,8 @@ export async function modalNewRequest() {
 
     const serviceType = serviceTypeInput ? serviceTypeInput.value : '';
 
-    let serviceDescription = '';
     if (serviceType === 'Manutenção') {
-      serviceDescription = Array.from(
+      const serviceDescription = Array.from(
         document.querySelectorAll('input[name="problem"]:checked')
       )
         .map((checkbox) => checkbox.value)
@@ -887,9 +869,9 @@ export async function modalNewRequest() {
         );
         return;
       }
+      data.maintenanceProblem = serviceDescription;
     }
 
-    let equipment = '';
     if (serviceType === 'Instalação') {
       const equipmentInput = document.querySelector(
         'input[name="equipment"]:checked'
@@ -903,7 +885,7 @@ export async function modalNewRequest() {
         );
         return;
       }
-      equipment = equipmentInput.value;
+      data.installationEquipment = equipmentInput.value;
     }
 
     if (!serviceType) {
@@ -916,16 +898,11 @@ export async function modalNewRequest() {
       return;
     }
 
-    const status = 'Pendente';
-    const data = {};
-
     data.clientId = dataAddress;
     data.addressId = address;
     data.envName = environment.value;
     data.requestType = serviceType;
     data.requestStatus = status;
-    data.maintenanceProblem = serviceDescription;
-    data.installationEquipment = equipment;
 
     try {
       const requestData = await registerRequest(data);
