@@ -213,13 +213,13 @@ export async function openRequestDetails(request) {
   let budgetBtnStatus;
   if (request.requestStatus === 'Pendente') {
     status = `<tr>
-            <td colspan="2" style="text-align: center; background-color: var(--color-pending);">
+            <td colspan="2" style="text-align: center; background-color: var(--color-valid);">
               Pendente avaliação técnica. Aguarde retorno do Técnico.
             </td>
           </tr>`;
   } else if (request.requestStatus === 'Retorno') {
     status = `<tr>
-            <td colspan="2" style="text-align: center; background-color: var(--color-pending);">
+            <td colspan="2" style="text-align: center; background-color: var(--color-valid);">
               Requisição gerada para serviço de Retorno 
             </td>
           </tr>`;
