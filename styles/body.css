@@ -1,0 +1,493 @@
+@import url("./header.css");
+@import url("./main.css");
+@import url("./footer.css");
+@import url("./modals.css");
+@import url("./forms.css");
+@import url("./tables.css");
+@import url("./responsive.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+nav, div, span, p, h1, h2, h3, h4, h5, h6 {
+  user-select: none;
+  cursor: default;
+}
+
+:root {
+  --font-1: verdana, sans-serif, lucida;
+  --font-2: Arial, Helvetica, sans-serif;
+  --color-header: rgba(0, 0, 0, 0.6);
+  --color-1: rgb(219, 219, 222);
+  --color-2: rgb(5, 124, 168);
+  --color-3: rgb(71, 71, 71);
+  --color-trans-1: rgba(219, 219, 222, 0.3);
+  --color-trans-2: rgba(5, 124, 168, 0.3);
+  --color-trans-3: rgb(71, 71, 71, 0.3);
+  --color-yes: rgb(32, 162, 36);
+  --color-no: rgb(238, 26, 26);
+  --color-end: rgb(255, 196, 0);
+  --color-viw: rgb(102, 176, 254);
+  --color-valid: rgba(0, 120, 4, 0.4);
+  --color-pending: rgba(255, 196, 0, 0.4);
+  --color-invalid: rgba(255, 0, 0, 0.4);
+  --color-main: rgba(5, 124, 168, 0.6);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+}
+ 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/img-16-9.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) { 
+
+  body {
+    font-size: 16px;
+  }
+
+  body::before {
+    background-image: url("../img/img-16-9.webp");
+  }
+
+  .banner-client {
+    position: fixed;
+    background-color: var(--color-main);
+    top: 4em;
+    left: 1em;
+    width: 24%;
+    height: 4em;
+  }
+
+  .panel {
+    display: none;
+  }
+
+  .banner-client h1 {
+    font-size: 1em;
+  }
+
+  .banner-client p {
+    font-size: 0.9em;
+  }
+
+  .banner-animado-1 h1 {
+    display: none;
+  }
+
+  .banner-animado-1 p {
+    display: none;
+  }
+
+  .banner-animado-1 {
+    background: transparent;
+    padding: 0;
+    animation: pulse 3s infinite;
+    width: 100%;
+  }
+
+  .banner-gta {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    padding: 0 0;
+  }
+
+  .navbar {
+    display: block;
+    width: 100%;
+  }
+
+  .session-enter {
+    display: flex;
+  }
+
+  .social-media {
+    display: flex;
+    width: 25%;
+  }
+
+  .footer-desk p {
+    font-size: 0.8em;
+  }
+  
+  .footer-desk h6 {
+    font-size: 0.7em;
+  }
+
+  .modal-content {
+    margin: 15% auto;
+    width: 45%;
+  }
+
+  .modal-user-content {
+    margin: 15% auto;
+    width: 45%;
+  }
+
+  .modal-information-content {
+    margin: 15% auto;
+    width: 45%;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  #informations {
+    display: none;
+  }
+
+  .contact-mail {
+    width: 28%;
+  }
+  .contact-phone {
+    width: 19%;
+  }
+
+  .section-header-title {
+    width: 30%;
+  }
+
+  .service-card {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .section-footer {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+
+  .footer-desk {
+    display: flex;
+  } 
+
+  .icon-contact {
+    width: 50%;
+  }
+  
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) { 
+
+  body {
+    font-size: 16px;
+  }
+
+  body::before {
+    background-image: url("../img/img-16-9.webp");
+  }
+
+  .banner-client {
+    position: fixed;
+    background-color: var(--color-main);
+    top: 4em;
+    left: 1em;
+    width: 24%;
+    height: 4em;
+  }
+
+  .banner-client h1 {
+    font-size: 1em;
+  }
+
+  .banner-client p {
+    font-size: 0.9em;
+  }
+
+  .panel {
+    display: none;
+  }
+
+  .banner-animado-1 h1 {
+    display: none;
+  }
+
+  .banner-animado-1 p {
+    display: none;
+  }
+
+  .banner-animado-1 {
+    background: transparent;
+    padding: 0;
+    animation: pulse 3s infinite;
+    width: 100%;
+  }
+
+  .banner-gta {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    padding: 0 0;
+  }
+
+  .navbar {
+    display: block;
+    width: 100%;
+  }
+
+  .session-enter {
+    display: flex;
+  }
+
+  .social-media {
+    display: flex;
+    width: 22%;
+  }
+
+  .footer-desk p {
+    font-size: 0.8em;
+  }
+  
+  .footer-desk h6 {
+    font-size: 0.7em;
+  }
+
+  .modal-content {
+    margin: 12% auto;
+    width: 40%;
+  }
+
+  .modal-user-content {
+    margin: 12% auto;
+    width: 40%;
+  }
+
+  .modal-information-content {
+    margin: 12% auto;
+    width: 40%;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  #informations {
+    display: none;
+  }
+
+  .contact-mail {
+    width: 28%;
+  }
+  .contact-phone {
+    width: 19%;
+  }
+
+  .section-header-title {
+    width: 20%;
+  }
+
+  .service-card {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .section-footer {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+
+  .footer-desk {
+    display: flex;
+  } 
+
+  .icon-contact {
+    width: 40%;
+  }
+  
+}
+
+@media (min-width: 1441px) { 
+
+  body {
+    font-size: 18px;
+  }
+
+  body::before {
+    background-image: url("../img/img-16-9.webp");
+  }
+
+  .banner-client {
+    position: fixed;
+    background-color: var(--color-main);
+    top: 4em;
+    left: 1em;
+    width: 24%;
+    height: 4em;
+  }
+
+  .banner-client h1 {
+    font-size: 1em;
+  }
+
+  .banner-client p {
+    font-size: 0.9em;
+  }
+
+  .panel {
+    display: none;
+  }
+
+  .banner-animado-1 h1 {
+    display: none;
+  }
+
+  .banner-animado-1 p {
+    display: none;
+  }
+
+  .banner-animado-1 {
+    background: transparent;
+    padding: 0;
+    animation: pulse 3s infinite;
+    width: 100%;
+  }
+
+  .banner-gta {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    padding: 0 0;
+  }
+
+  .navbar {
+    display: block;
+    width: 100%;
+  }
+
+  .session-enter {
+    display: flex;
+  }
+
+  .social-media {
+    display: flex;
+    width: 20%;
+  }
+
+  .footer-desk p {
+    font-size: 0.9em;
+  }
+  
+  .footer-desk h6 {
+    font-size: 0.8em;
+  }
+
+  .modal-content {
+    margin: 10% auto;
+    width: 40%;
+  }
+
+  .modal-user-content {
+    margin: 10% auto;
+    width: 40%;
+  }
+
+  .modal-information-content {
+    margin: 10% auto;
+    width: 40%;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  #informations {
+    display: none;
+  }
+
+  .contact-mail {
+    width: 28%;
+  }
+  .contact-phone {
+    width: 19%;
+  }
+
+  .section-header-title {
+    width: 17%;
+  }
+
+  .service-card {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .section-footer {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+
+  .footer-desk {
+    display: flex;
+  } 
+
+  .icon-contact {
+    width: 40%;
+  }
+  
+}

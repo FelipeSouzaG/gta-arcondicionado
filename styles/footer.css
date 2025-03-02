@@ -1,0 +1,77 @@
+footer {
+  background-color: var(--color-header);
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1em;
+}
+
+.footer-mobile a {
+  font-size: 1.5em;
+  color: var(--color-1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer-mobile a:hover {
+  transform: scale(1.4);
+}
+
+.footer-mobile a:active {
+  transform: scale(1.4);
+  color: var(--color-3);
+}
+
+.footer-desk {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.footer-desk p {
+  font-family: var(--font-1);
+  font-weight: 500;
+  font-size: 0.7em;
+  color: var(--color-1);
+}
+
+.footer-desk h6 {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 0.6em;
+  color: var(--color-1);
+}
+
+.footer-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.footer-history p {
+  font-family: var(--font-1);
+  font-weight: 500;
+  font-size: 0.7em;
+  color: var(--color-1);
+}
+
+.footer-history h6 {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 0.6em;
+  color: var(--color-1);
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GTA Ar Condicionado - Especialistas em instalação, manutenção e limpeza de ar-condicionado. Atendimento rápido e serviços com garantia de qualidade.">
+    <meta name="keywords" content="instalação de ar condicionado, manutenção de ar condicionado, limpeza de ar condicionado, ar condicionado split, assistência técnica, GTA Ar Condicionado">
+    <meta name="author" content="GTA Ar Condicionado">
+    <title>GTA Ar Condicionado</title>
+    <link rel="stylesheet" href="./styles/body.css">
+    <script type="module" src="./scripts/session.js" defer></script>
+  </head>
+
+  <body>
+    <header> 
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Informações</a>
+            <ul class="dropdown">
+              <li><a href="#" id="contact-desktop" class="navbar-link">Contato GTA</a></li>
+              <li><a href="#" id="information-desktop" class="navbar-link">Sobre a GTA</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item data-client-desktop hidden">
+            <a href="#" class="navbar-link">Meus Dados</a>
+            <ul class="dropdown">
+              <li><a href="#" id="client-desktop">Dodos do Cliente</a></li>
+              <li><a href="#" id="environment-desktop">Ambientes</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Serviços</a>
+            <ul class="dropdown">
+              <li><a href="#" id="service-desktop">Solicitar Serviço</a></li>
+              <li class="service-client-desktop hidden"><a href="#" id="request-desktop">Verificar Solicitações</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Minha Conta</a>
+            <ul class="dropdown">
+              <li><a href="#" id="dataUser-desktop">Dados da Conta</a></li>
+              <li><a href="#" id="deleteUser-desktop">Excluir Conta</a></li>
+              <li><a href="#" id="logout-desktop">Encerrar Sessão</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <div class="banner-client">
+        <h1>GTA AR CONDICIONADO</h1>
+        <p>Ambiente do Cliente</p>
+      </div>
+
+      <div id="session-timer" class="session-renew">
+        <div class="btn-session">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi enter" id="renew-session" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+          </svg>
+        </div>
+        <div class="progress" id="progress-circle"></div>
+      </div>
+
+      <section class="panel" id="panel-mobile">
+        <div class="panel-action">
+          <button class="panel-action-btn data-client-btn hidden" id="client-btn">Dados do Cliente</button>
+          <button class="panel-action-btn data-env-btn hidden" id="environment-btn">Ambientes</button>
+          <button class="panel-action-btn" id="service-btn">Solicitar Serviço</button>
+          <button class="panel-action-btn service-client-btn hidden" id="request-btn">Verificar Solicitações</button>
+          <button class="panel-action-btn" id="dataUser-btn">Dados da Conta</button>
+          <button class="panel-action-btn" id="contact-btn">Contato GTA</button>
+          <button class="panel-action-btn" id="information-btn">Sobre a GTA</button>
+          <button class="panel-action-btn logout-btn-tablet" id="logout-btn">Encerrar Sessão</button>
+          <button class="panel-action-btn" id="deleteUser-btn">Excluir Conta</button>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer>
+      <div class="footer-mobile">
+        <a href="https://wa.me/5531995454632?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Servi%C3%A7os%20da%20GTA%20Ar%20Condicionados." target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+          </svg>
+        </a>
+        <a href="tel:+5531995454632">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16">
+            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+          </svg>
+        </a>
+        <a href="#" id="enter-mobile">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" id="exit-session" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-desk">
+        <p>&copy2025 - GTA Ar Condicionado&reg</p>
+        <h6>Desenvolvido por FG Soluções Web&reg</h6>
+      </div>
+    </footer>
+
+    <div id="modal-register" class="modal-user">
+      <div class="modal-user-content">
+        <div class="modal-user-content-header">
+          <i></i>
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi-close close" id="close-register" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </div>
+        <div class="modal-user-content-title">
+          <span id="modal-register-title" class="modal-user-title"></span>
+        </div>
+        <div id="modal-register-main" class="modal-user-content-main"></div>
+        <div id="modal-register-footer" class="modal-user-footer"></div>        
+      </div>
+    </div>
+
+    <div id="modal-details" class="modal-user">
+      <div class="modal-user-content">
+        <div class="modal-user-content-header">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi-close arrow-left" id="arrow-details" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi-close close" id="close-details" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </div>
+        <div class="modal-user-content-title">
+          <span id="modal-details-title" class="modal-user-title"></span>
+        </div>
+        <div id="modal-details-main" class="modal-user-content-main"></div>
+        <div id="modal-details-footer" class="modal-user-footer"></div>        
+      </div>
+    </div>
+
+    <div id="modal-information" class="modal-information">
+      <div class="modal-information-content">
+        <div class="modal-information-content-header">
+          <i></i>
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi-close close" id="close-information" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </div>
+        <div class="modal-information-content-title">
+          <span id="modal-information-title" class="modal-information-title"></span>
+        </div>
+        <div id="modal-information-main" class="modal-information-content-main"></div>
+        <div id="modal-information-footer" class="modal-information-content-footer">
+          <button id="exit-information" class="modal-information-close"> Fechar </button>
+        </div>        
+      </div>
+    </div>
+  
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle"></h2>
+        <p id="modalMessage"></p>
+        <div class="modal-content-btn">
+          <button id="modalBtnOk" class="modal-content-btn-ok">
+            Sim
+          </button>
+          <button id="modalBtnCancel" class="modal-content-btn-cancel">
+            Não
+          </button>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
