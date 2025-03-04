@@ -3,7 +3,8 @@ import { showModalContact, showModalInformation } from './info.js';
 import { closeModalRegister, showModalAlert } from './modals.js';
 import { environmentAllServices } from './fetch.js';
 
-async function enableFullScreen() {
+document.addEventListener('DOMContentLoaded', async function () {
+  function enableFullScreen() {
   if (document.documentElement.requestFullscreen) {
     document.documentElement.requestFullscreen();
   } else if (document.documentElement.webkitRequestFullscreen) {
@@ -12,12 +13,10 @@ async function enableFullScreen() {
     document.documentElement.msRequestFullscreen();
   }
 }
-
-document.addEventListener('DOMContentLoaded', async function () {
-  await enableFullScreen();
+  enableFullScreen();
   document.addEventListener('click', () => {
     if (!document.fullscreenElement) {
-     await enableFullScreen();
+     enableFullScreen();
     }
   });
   
