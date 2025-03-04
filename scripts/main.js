@@ -3,7 +3,24 @@ import { showModalContact, showModalInformation } from './info.js';
 import { closeModalRegister, showModalAlert } from './modals.js';
 import { environmentAllServices } from './fetch.js';
 
+function enableFullScreen() {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) {
+    document.documentElement.msRequestFullscreen();
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async function () {
+  enableFullScreen();
+  document.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      enableFullScreen();
+    }
+  });
+  
   const toggleButtons = document.querySelectorAll('.toggle-button');
   const mainSections = document.querySelectorAll('.section-content');
   const bannerSection = document.querySelector('.banner');
